@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Pet from "./Pet"
 import useBreedList from "./useBreedList"
+import Results from "./Results"
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"]
 
 
@@ -14,7 +15,8 @@ const SearchParams = () => {
   // we make an API request after render 1 time
   useEffect(() => {
     requestPets()
-  }, []) // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) 
 
   // the function for requesting and receiving response data from API. interpolates animal, location and breed
   async function requestPets() {
@@ -74,15 +76,7 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {
-        pets.map(pet => (
-          <Pet 
-            name={pet.name}
-            animal={pet.animal} 
-            breed={pet.breed}
-            key={pet.id}
-          />
-        ))}
+      <Results pets={pets}/>
     </div>
   )
 }
