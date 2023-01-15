@@ -4,7 +4,7 @@ import fetchPet from "./fetchPet"
 
 const Details = () => {
   const  {id} = useParams()
-  const results = useQuery(["details", id, fetchPet])
+  const results = useQuery(["details", id], fetchPet)
 
   if (results.isLoading) {
     return (
@@ -17,7 +17,7 @@ const Details = () => {
   const pet = results.data.pets[0]
 
   return (
-    <div className="">
+    <div className="details">
       <div>
         <h1>{pet.name}</h1>
         <h2>
@@ -26,7 +26,6 @@ const Details = () => {
           <p>{pet.description}</p>
         </h2>
       </div>
-
     </div>
   )
 }

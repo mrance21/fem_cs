@@ -1,4 +1,4 @@
-const fetchPet = async ({queryKey}) => {
+const fetchPet = async ({ queryKey }) => {
   const id = queryKey[1]
   console.log(queryKey)
 
