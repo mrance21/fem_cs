@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query"
 import fetchPet from "./fetchPet"
 
 const Details = () => {
-  const  {id} = useParams()
+  const  { id } = useParams()
   const results = useQuery(["details", id], fetchPet)
 
   if (results.isLoading) {
