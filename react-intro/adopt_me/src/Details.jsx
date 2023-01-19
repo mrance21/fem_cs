@@ -35,7 +35,7 @@ const Details = () => {
             (
               <Modal>
                 <div>
-                  <h1>Would you like to adopt {pet.name}</h1>
+                  <h1>Would you like to adopt {pet.name}?</h1>
                   <div className="buttons">
                     <button>Yes</button>
                     <button onClick={() => setShowModal(false)}>No</button>
