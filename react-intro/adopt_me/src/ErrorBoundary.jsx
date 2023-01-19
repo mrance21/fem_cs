@@ -1,6 +1,5 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import Details from "./Details";
 
 class ErrorBoundary extends Component {
   state = { hasError: false }
@@ -21,15 +20,10 @@ class ErrorBoundary extends Component {
       </h2>
       )
     }
+
+    return this.props.children
   }
 }
 
-function DetailsErrorBoundary() {
-  return (
-    <ErrorBoundary>
-      <Details />
-    </ErrorBoundary>
-  )
-}
 
-export default DetailsErrorBoundary
+export default ErrorBoundary
