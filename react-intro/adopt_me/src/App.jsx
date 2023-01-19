@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
@@ -32,7 +31,6 @@ const App = () => {
         </AdoptedPetContext.Provider>
       </QueryClientProvider>
     </BrowserRouter>
-    
   )
 };
 
