@@ -22,7 +22,8 @@ const App = () => {
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
           <AdoptedPetContext.Provider value={adoptedPet}>
-            <header>
+            <header className="w-full mb-10 t-center bg-gradient-to-b 
+            from-yellow-400 via-orange-500 to-red-500 p-7 text-center">
               <Link to="/">Adopt Me</Link>
             </header>
             <Routes>
