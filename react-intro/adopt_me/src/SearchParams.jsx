@@ -55,6 +55,7 @@ const SearchParams = () => {
           <select 
             id="animal"
             value={animal}
+            className="w-60 mb-5 block"
             onChange={e => {
               setAnimal(e.target.value)
             }}
@@ -69,6 +70,7 @@ const SearchParams = () => {
           Breeds
           <select 
             id="breed"
+            className="w-60 mb-5 block"
             disabled={breeds.length === 0}
             name="breed"
             >
