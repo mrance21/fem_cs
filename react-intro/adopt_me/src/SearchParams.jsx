@@ -44,8 +44,10 @@ const SearchParams = () => {
         <label htmlFor="location">
           Location
           <input 
+            type="text"
             name="location"
             id="location" 
+            className="w-60 mb-5 block"
             placeholder="Location" />
         </label>
         <label htmlFor="animal">
