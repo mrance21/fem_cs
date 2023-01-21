@@ -80,7 +80,8 @@ const SearchParams = () => {
               ))}
           </select>
         </label>
-        <button>Submit</button>
+        <button className="rounded px-6 border-none bg-orange-500 py-2 
+        text-white hover:opacity-50">Submit</button>
       </form>
       <Results pets={pets}/>
     </div>
