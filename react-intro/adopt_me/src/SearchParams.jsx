@@ -70,7 +70,7 @@ const SearchParams = () => {
           Breeds
           <select 
             id="breed"
-            className="w-60 mb-5 block"
+            className="w-60 mb-5 block disabled:opacity-50"
             disabled={breeds.length === 0}
             name="breed"
             >
