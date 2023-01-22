@@ -44,3 +44,5 @@ const App = () => {
 };
 
 export default App
+
+// making app general purpose so it can be run in node or browser
