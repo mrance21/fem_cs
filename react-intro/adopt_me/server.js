@@ -13,7 +13,7 @@ const html = fs.readFileSync(path.resolve(__dirname, './dist/client/index.html')
 const parts = html.split("not rendered")
 
 const app = express()
-app.use("/assests",
+app.use("/assets",
 express.static(path.resolve(__dirname, "./dist/client/assets")))
 
 app.use((req, res) => {
@@ -21,7 +21,7 @@ app.use((req, res) => {
 
   const stream = renderApp(req.url, {
     onShellReady() {
-      stream.pope(res)
+      stream.pipe(res)
     },
     onShellError() {
       //do error handling here
